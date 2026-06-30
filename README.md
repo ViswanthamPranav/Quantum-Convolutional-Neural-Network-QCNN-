@@ -1,25 +1,19 @@
-# Quantum Image Classifier using QCNN
+# Quantum Image Classifier
 
-An advanced image processing and classification framework that leverages Hybrid Quantum-Classical Machine Learning to segregate and classify complex textual images. This project implements a **Quantum Convolutional Neural Network (QCNN)** built using **PennyLane** to perform high-efficiency binary classification.
+This project implements a **Quantum Convolutional Neural Network (QCNN)** using **PennyLane** to classify and segregate images into two categories: Ancient Characters and Modern Kanji Characters.
 
-*This project was developed as part of an **Internship at IIIT Kottayam**.*
+This project was developed during my **Internship at IIIT Kottayam**.
 
----
+## 📂 Project Structure
+* `finalest_final_qcnn_segregation_code.ipynb` - The main Google Colab / Jupyter Notebook containing the data pipeline and Quantum Machine Learning models.
+* `dataset_ancient_modern (1).zip` - The raw image dataset used for training and classification.
 
-## 📌 Project Overview
-The core goal of this project is to distinguish and categorize textual characters into two distinct structural formats:
-1. **Ancient Characters** (`Ancient_Non_OBC`)
-2. **Modern Kanji Characters** (`Modern_Kanji`)
+## 🛠️ How It Works
+1. **Data Preprocessing:** The notebook automatically unzips the dataset, cleans up old directories, and structures images into categorized folders (`Ancient_Non_OBC` and `Modern_Kanji`).
+2. **Quantum Feature Embedding:** Image data is reduced in dimensionality so it can be loaded onto quantum qubits.
+3. **QCNN Model:** Uses parameterized quantum convolution and pooling layers built on PennyLane to classify the images.
 
-By utilizing a Quantum Convolutional Neural Network (QCNN), the framework introduces quantum circuits capable of representation learning, executing quantum convolution and pooling operations to detect feature hierarchies that classical networks might struggle to parse efficiently.
-
----
-
-## 🛠️ Technical Workflow
-
-### 1. Data Cleaning & Automated Segregation
-Before feeding images into the quantum pipeline, the workspace cleans up old allocations and handles unstructured datasets directly from zip formats. It walks through nested directories to isolate images with standard formats (`.png`, `.jpg`, `.jpeg`, etc.), renaming and centralizing them into a structured directory tree:
-```text
-dataset_segregated/
-   ├── Ancient_Non_OBC/  --> (Centralized ancient image samples)
-   └── Modern_Kanji/     --> (Centralized modern Kanji image samples)
+## ⚙️ Requirements
+To run the notebook locally, you need the following Python libraries installed:
+```bash
+pip install pennylane numpy matplotlib scipy autograd
