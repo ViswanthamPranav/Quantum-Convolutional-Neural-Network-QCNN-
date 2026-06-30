@@ -9,7 +9,7 @@ This project was developed during my **Internship at IIIT Kottayam**.
 * `dataset_ancient_modern (1).zip` - The raw image dataset used for training and classification.
 
 ## 🛠️ How It Works
-1. **Data Preprocessing:** The notebook automatically unzips the dataset, cleans up old directories, and structures images into categorized folders (`Ancient_Non_OBC` and `Modern_Kanji`).
+1. **Data Preprocessing:** The notebook automatically unzips the dataset, cleans up old directories, and structures images into categorized folders.
 2. **Quantum Feature Embedding:** Image data is reduced in dimensionality so it can be loaded onto quantum qubits.
 3. **QCNN Model:** Uses parameterized quantum convolution and pooling layers built on PennyLane to classify the images.
 
